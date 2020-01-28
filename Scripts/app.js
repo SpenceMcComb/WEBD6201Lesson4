@@ -24,10 +24,13 @@ let app;
     // Part C
     let bottomNav;
     let h4Copyright;
-
     let pageBody;
     let jqueryScript;
     let jqueryScriptParent;
+
+    // Test practice
+    let h1Delete;
+
 
     
 
@@ -89,6 +92,15 @@ let app;
 
         jqueryScriptParent = jqueryScript.parentNode;
         jqueryScriptParent.insertBefore(bottomNav, jqueryScript);
+
+        // Part D - add to github
+        /**
+         * git init
+         * git add .
+         * git commit -m "First commit"
+         * $ git remote add origin remote repository URL
+         * $ git remote -v
+         */
         
 
         Main();
@@ -100,6 +112,28 @@ let app;
      */
     function Main()
     {
+        // Test practice
+
+        // Deleting an element
+        h1Delete = document.getElementsByTagName("h1")[0];
+        //h1Delete.remove();
+        //h1Delete.style.cssText = "display: none;";
+
+        // Mouseover, out, and click for test!
+        h1Delete.addEventListener("click", function() {
+            h1Delete.textContent = "Goodbye!";
+        });
+
+        h1Delete.addEventListener("mouseover", function(){
+            //h1Delete.style.cssText = "color: red";
+            h1Delete.style.color = "red";
+            h1Delete.style.cursor = "pointer";
+        });
+
+        h1Delete.addEventListener("mouseout", function(){
+            h1Delete.style.color = "black";
+            h1Delete.style.cursor = "default";
+        });
         
     }
     
